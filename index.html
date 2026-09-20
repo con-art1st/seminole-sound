@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seminole Sound 91.5 – FSU Student Radio</title>
+  <meta name="description" content="Seminole Sound 91.5, Florida State University's student-run campus radio station.">
+</head>
+<body>
+
+<!-- ============================================================
+     SITE HEADER + SHARED NAVIGATION
+     This block is given to you as a pattern. Copy it, unchanged,
+     into schedule.html, request.html and join.html so the nav is
+     identical on all four pages.
+     ============================================================ -->
+<header>
+  <img src="images/logo.png" alt="Seminole Sound 91.5 station logo">
+  <p>91.5 FM &middot; Tallahassee &middot; Student-Run Since 1978</p>
+
+  <nav aria-label="Main">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="schedule.html">Schedule</a></li>
+      <li><a href="request.html">Request Line</a></li>
+      <li><a href="join.html">Join the Station</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <h1>Seminole Sound 91.5</h1>
+
+  <!-- TODO 1: "On Air Now" panel.
+       A <section> with the show name, DJ name, and the time block on air.
+
+
+       Inside it, a "Recently Played" list of at least five tracks. Each
+       entry needs the song title AND the artist, and the two must be
+       distinguishable from the markup alone — <cite> for the title and
+       <strong> for the artist, for example. There is no CSS in this
+       project, so if the difference only exists in a stylesheet you have
+       not written, it does not exist. -->
+
+       <!-- On Air Now panel using section -->
+       <section> 
+          <h2>
+               On Air Now: Show Name, DJ Name, and Time Block
+          </h2>
+          <p> Recently Played: </p>
+          <cite> Enter Sandman by <strong> Metallica </strong> </cite>
+          <div><cite> Enter Sandman by <strong> Metallica </strong> </cite></div>
+          <div><cite> Enter Sandman by <strong> Metallica </strong> </cite></div>
+          <div><cite> Enter Sandman by <strong> Metallica </strong> </cite></div>
+          <div><cite> Enter Sandman by <strong> Metallica </strong> </cite></div>
+
+       </section>
+
+  <!-- TODO 2: Station history.
+       An <article> of at least two real paragraphs about how the station
+       started. Include the studio photo (images/studio.jpg) with alt text
+       that describes what is in the picture, not the filename. -->
+
+     <!-- Station History using article  -->
+       <article>
+          <h2>
+               Station History
+          </h2>
+
+          <p>
+               Real paragraph 1
+          </p>
+          <p>
+               Real paragraph 2 
+          </p>
+
+          <!-- PHOTO with alt text that describes what is in the picture -->
+       </article>
+
+  <!-- TODO 3: Featured show.
+       An <aside> highlighting one show from your schedule page. -->
+          <aside>
+               <h2>
+                    This Week's Featured Show!
+               </h2>
+               <ul>
+                    <li>
+                         <a href="#">This Week's Show</a>
+                    </li>
+               </ul>
+          </aside>
+
+  <!-- TODO 4: Studio location.
+       A <section> with a Google Maps <iframe>. Get the embed code from
+       Google Maps: Share -> Embed a map. Add a `title` attribute to the
+       iframe describing what the map shows. -->
+</main>
+<section>
+     <h2>
+          Studio Location
+     </h2>
+<!-- GOOGLE MAPS embed of Oglesby Union studio location -->
+ <title>
+     Oglesby Union Studio Location
+ </title>
+     <iframe width= "600" height= "450"
+          style="border:0;" loading="lazy"
+          allowfullscreen=""
+          src="https://www.google.com/maps/
+embed?pb=ENCODED_URL">
+     </iframe>
+
+</section>
+
+<!-- TODO 5: Site footer.
+     A <footer> containing an <address> with the station's mailing address,
+     request line (tel: link) and email (mailto: link), a <nav> of social
+     placeholder links, and a copyright line.
+     Reuse this footer on all four pages. -->
+
+     <footer>
+          <address>
+               123 Address, Tallahassee, FL, 32304
+          </address>
+
+          Request Line: 
+          <input type="tel" name="phone"
+          placeholder="(123) 456-7890">
+
+          Email: 
+          <input type>
+
+          <p>
+               &copy;2026TheStudio
+          </p>
+     </footer>
+
+</body>
+</html>
