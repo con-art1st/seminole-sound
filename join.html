@@ -1,28 +1,102 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Join the Station – Seminole Sound 91.5</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Join the Station – Seminole Sound 91.5</title>
+  </head>
+  <body>
+    <!-- TODO: paste the shared header + nav block from index.html here -->
+    <!-- ============================================================
+     SITE HEADER + SHARED NAVIGATION
+     This block is given to you as a pattern. Copy it, unchanged,
+     into schedule.html, request.html and join.html so the nav is
+     identical on all four pages.
+     ============================================================ -->
+    <header>
+      <img src="images/logo.png" alt="Seminole Sound 91.5 station logo" />
+      <p>91.5 FM &middot; Tallahassee &middot; Student-Run Since 1978</p>
 
-<!-- TODO: paste the shared header + nav block from index.html here -->
+      <nav aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="request.html">Request Line</a></li>
+          <li><a href="join.html">Join the Station</a></li>
+        </ul>
+      </nav>
+    </header>
 
-<main>
-  <h1>Join the Station</h1>
+    <main>
+      <h1>Join the Station</h1>
 
-  <!-- TODO 1: What crew members do.
+      <!-- TODO 1: What crew members do.
        A <section> containing at least two <article> elements describing
        different kinds of roles — on-air work and behind-the-board work,
        for instance. -->
 
-  <!-- TODO 2: Crew roles <table>.
+      <!--Section with articles that describe the roles at the station. -->
+      <section>
+        <h2>Roles of Crew Members</h2>
+        <article>
+          <h3>On-Air Work:</h3>
+          <p>For example, the Announcer.</p>
+        </article>
+        <article>
+          <h3>Behind-the-Board Work:</h3>
+          <p>For example, the Music Director.</p>
+        </article>
+      </section>
+
+      <!-- TODO 2: Crew roles <table>.
        A <caption>, a <thead> with column headers (Position, Time
        Commitment, Requirements), and at least four rows. Start each body
        row with <th scope="row"> for the position name. -->
 
-  <!-- TODO 3: The DJ application <form>.
+      <!--Crew Roles table shows that positions available at the station, along with the time commitment and requirements.-->
+      <table>
+        <caption>
+          Crew Roles
+        </caption>
+
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">Position</th>
+            <th scope="col">Time Commitment</th>
+            <th scope="col">Requirements</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Announcer</td>
+            <td>15 hours</td>
+            <td>Attend all on-air sessions</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Music Director</td>
+            <td>10 hours</td>
+            <td>Must choose appropriate and popular music</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Audio Engineer</td>
+            <td>12 hours</td>
+            <td>Understand how to work basic sound equipment</td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>News Director</td>
+            <td>15 hours</td>
+            <td>Find relevant stories for the station to broadcast</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- TODO 3: The DJ application <form>.
        Fields: full name (text), FSU email (email), phone (tel),
        class standing (<select>), earliest start date (type="date"),
        hours per week (type="number" with min and max), position
@@ -30,11 +104,145 @@
        checkbox. Submit and reset buttons.
        Group them in <fieldset>/<legend> blocks. -->
 
-  <!-- TODO 4: What happens next.
+      <!--DJ application form allows for information to be shared (input via text, email, tel, date, number). 
+          Application can be submitted or reset. Application allows for selectable items.-->
+      <section>
+        <h2>DJ Application Form</h2>
+        <form>
+          <fieldset>
+            <legend>Apply to Seminole Sound!</legend>
+            <!--text input-->
+            <label for="name">Name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Full Name"
+              maxlength="100"
+              required
+            />
+
+            <!--FSU Email input-->
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="johndoe123@fsu.edu"
+              required
+            />
+
+            <!--phone number input-->
+            <label for="phone">Phone Number</label>
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              placeholder="(123) 456-7890"
+              required
+            />
+
+            <!--class standing input-->
+            <label for="class">Class</label>
+            <select name="class" id="class">
+              <option value="" selected>Choose a class</option>
+              <option value="">Freshman</option>
+              <option value="">Sophomore</option>
+              <option value="">Junior</option>
+              <option value="">Senior</option>
+            </select>
+
+            <label for="date">Earliest Start Date:</label>
+            <input type="date" name="date" id="date" />
+
+            <label for="number">Hours Available per week:</label>
+            <input type="number" name="number" id="number" min="5" max="20" />
+
+            <!--Crew Member Position selection-->
+            <label for="position">Select a Position:</label>
+            <select name="position" id="position">
+              <option value="" selected>Choose a position</option>
+              <option value="">Announcer</option>
+              <option value="">Music Director</option>
+              <option value="">Audio Engineer</option>
+              <option value="">News Director</option>
+            </select>
+
+            <!--Multi-line text area to write-->
+            <label for="message">Message</label>
+            <textarea
+              name="message"
+              placeholder="Experience"
+              id="message"
+              rows="2"
+              cols="70"
+              maxlength="600"
+            ></textarea>
+
+            <!--Required Terms checkbox -->
+            <div>
+              <label for="terms">
+                <input type="checkbox" id="terms" name="terms" value="yes" />
+                I understand the required terms and conditions.
+              </label>
+            </div>
+
+            <button type="submit">Submit Application</button>
+
+            <button type="reset">Reset Application</button>
+          </fieldset>
+        </form>
+      </section>
+
+      <!-- TODO 4: What happens next.
        An <ol> walking through the steps after a student applies. -->
-</main>
 
-<!-- TODO: paste the shared footer block from index.html here -->
+      <!--list of what to expect after applying to the station via ol and li-->
+      <ol>
+        <li>
+          After applying, expect to hear back within 1 week, regarding your
+          application status.
+        </li>
+        <li>
+          If you are offered a role with Seminole Sound, you must accept or
+          decline the offer within 72 hours.
+        </li>
+        <li>
+          Once you accept a role, you must commit to your position for at least
+          1 school semester.
+        </li>
+      </ol>
+    </main>
 
-</body>
+    <!-- TODO: paste the shared footer block from index.html here -->
+
+    <!--This is a footer section that contains contact information for the studio.-->
+    <footer>
+      <p>Mailing Address</p>
+
+      <address>123 Address, Tallahassee, FL, 32304</address>
+
+      <div>
+        <p>Request Line:</p>
+        <a href="tel:1234567890"> Call Us!</a>
+
+        <p>Email:</p>
+        <a href="mailto:SeminoleSound@gmail.com?"> Email Us!</a>
+      </div>
+
+      <nav>
+        <ul>
+          <!--Social Placeholder links; they don't actually work!-->
+          <li><a href="/"> Home </a></li>
+          <li><a href="youtube.com"> Youtube </a></li>
+          <li><a href="/instagram.com"> Instagram </a></li>
+          <li><a href="/facebook.com"> Facebook </a></li>
+        </ul>
+      </nav>
+      <p>
+        <!--copyright line -->
+        &copy;2026SeminoleSoundStudio
+      </p>
+    </footer>
+  </body>
 </html>
